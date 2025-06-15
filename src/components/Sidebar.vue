@@ -125,6 +125,7 @@
                 </div>
             </b-collapse>
         </div>
+        <ChatWidget />
     </div>
 </template>
 <script>
@@ -133,6 +134,7 @@ import Dropzone from './SideBarFileManager.vue'
 import MessageMenu from './SideBarMessageMenu.vue'
 import {store} from './Globals.js'
 import PlotSetup from './PlotSetup.vue'
+import ChatWidget from './ChatWidget.vue'
 
 export default {
     name: 'sidebar',
@@ -215,7 +217,7 @@ export default {
 
         downloadFile (filename) {
             this.downloadBlob(this.state.files[filename], filename, 'application/octet-stream')
-        }
+        },
     },
     created () {
         this.$eventHub.$on('set-selected', this.setSelected)
@@ -225,7 +227,7 @@ export default {
             this.downloadURL = URL.createObjectURL(this.blob)
         }
     },
-    components: {PlotSetup, MessageMenu, Dropzone}
+    components: {PlotSetup, MessageMenu, Dropzone, ChatWidget}
 }
 </script>
 <style scoped>
