@@ -1,0 +1,22 @@
+What was the highest altitude reached during the flight?
+
+“When did the GPS signal first get lost?
+
+“What was the maximum battery temperature?
+
+“How long was the total flight time?
+
+“List all critical errors that happened mid-flight.
+
+“When was the first instance of RC signal loss?
+
+“Are there any anomalies in this flight?
+
+“Can you spot any issues in the GPS data?
+
+
+
+
+
+
+

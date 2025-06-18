@@ -46,16 +46,21 @@ export default {
     methods: {
         async sendMessage () {
             if (this.newMessage.trim() && this.state.file) {
+                // Store the message content and clear input immediately
+                const messageText = this.newMessage
+                this.newMessage = ''
+                
                 // Add user message to chat
                 const userMessage = {
-                    text: this.newMessage,
+                    text: messageText,
                     type: 'user',
                     timestamp: new Date()
                 }
                 this.messages.push(userMessage)
+                
                 // Prepare message for API with complete parsed data
                 const messageData = {
-                    message: this.newMessage,
+                    message: messageText,
                     fileInfo: {
                         name: this.state.file,
                         type: this.state.logType,
@@ -88,8 +93,7 @@ export default {
                     })
                 }
 
-                // Clear input and scroll to bottom
-                this.newMessage = ''
+                // Scroll to bottom after response
                 this.$nextTick(() => {
                     this.scrollToBottom()
                 })

@@ -1,0 +1,123 @@
+{
+  "ACC": {
+    "TimeUS":    { "unit": "μs",   "desc": "Timestamp since boot" },
+    "instance":  { "unit": "count","desc": "Accelerometer instance index" },
+    "SampleUS":  { "unit": "μs",   "desc": "Sample-specific timestamp" },
+    "AccX":      { "unit": "m/s²", "desc": "Acceleration X-axis" },
+    "AccY":      { "unit": "m/s²", "desc": "Acceleration Y-axis" },
+    "AccZ":      { "unit": "m/s²", "desc": "Acceleration Z-axis" }
+  },
+  "XKQ": {
+    "time_boot_ms": { "unit": "ms",  "desc": "Timestamp since boot" },
+    "Q1":           { "unit": "quat","desc": "Quaternion component 1" },
+    "Q2":           { "unit": "quat","desc": "Quaternion component 2" },
+    "Q3":           { "unit": "quat","desc": "Quaternion component 3" },
+    "Q4":           { "unit": "quat","desc": "Quaternion component 4" }
+  },
+  "AETR": {
+    "TimeUS": { "unit": "μs",   "desc": "Timestamp since boot" },
+    "Ail":    { "unit": "unitless","desc": "Aileron output" },
+    "Elev":   { "unit": "unitless","desc": "Elevator output" },
+    "Thr":    { "unit": "unitless","desc": "Throttle output" },
+    "Rudd":   { "unit": "unitless","desc": "Rudder output" },
+    "Flap":   { "unit": "%",    "desc": "Flap position" },
+    "Steer":  { "unit": "unitless","desc": "Steer output" }
+  },
+  "AHR2": {
+    "TimeUS": { "unit": "μs", "desc": "Timestamp since boot" },
+    "Roll":   { "unit": "deg","desc": "Estimated roll" },
+    "Pitch":  { "unit": "deg","desc": "Estimated pitch" },
+    "Yaw":    { "unit": "deg","desc": "Estimated yaw" },
+    "Alt":    { "unit": "m",  "desc": "Estimated altitude AMSL" },
+    "Lat":    { "unit": "deg","desc": "Estimated latitude" },
+    "Lng":    { "unit": "deg","desc": "Estimated longitude" }
+  },
+  "ARM": {
+    "TimeUS":    { "unit": "μs", "desc": "Timestamp since boot" },
+    "ArmState":  { "unit": "bool","desc": "Armed/unarmed state" },
+    "ArmChecks": { "unit": "bitmask","desc": "Arming checks bitmask" }
+  },
+  "ERR": {
+    "TimeUS": { "unit": "μs",   "desc": "Timestamp of error" },
+    "Subsys": { "unit": "int",  "desc": "Subsystem reporting error" },
+    "ECode":  { "unit": "int",  "desc": "Error/failsafe code" }
+  },
+  "EV": {
+    "TimeUS": { "unit": "μs",  "desc": "Timestamp of event" },
+    "Id":     { "unit": "int","desc": "Event ID (e.g., armed, takeoff)" }
+  },
+  "FILE": {
+    "FileName": {"unit": "string", "desc": "Log file name"},
+    "Offset": {"unit": "byte offset", "desc": "Byte offset of this log block"},
+    "Length": {"unit": "bytes", "desc": "Length of data block"},
+    "Data": {"unit": "bytes", "desc": "Raw data blob of this block"}
+  },
+  "ATT": {
+    "time_boot_ms": {"unit": "ms", "desc": "Timestamp since system boot"},
+    "DesRoll": {"unit": "deg", "desc": "Desired roll setpoint"},
+    "Roll": {"unit": "deg", "desc": "Actual roll angle"},
+    "DesPitch": {"unit": "deg", "desc": "Desired pitch setpoint"},
+    "Pitch": {"unit": "deg", "desc": "Actual pitch angle"},
+    "DesYaw": {"unit": "deg", "desc": "Desired yaw setpoint"},
+    "Yaw": {"unit": "deg", "desc": "Actual yaw angle"},
+    "ErrRP": {"unit": "unitless", "desc": "Roll/pitch tracking error estimate"},
+    "ErrYaw": {"unit": "unitless", "desc": "Yaw error estimate"},
+    "AEKF": {"unit": "unitless", "desc": "Augmented EKF status"}
+  },
+  "GPS[0]": {
+    "time_boot_ms": {"unit": "ms", "desc": "Timestamp since system boot"},
+    "I": {"unit": "int", "desc": "GPS instance index"},
+    "Status": {"unit": "enum", "desc": "Fix status (0=no fix, 1=2D GPS fix, 2=3D GPS fix, 3=DGPS fix)."},
+    "GMS": {"unit": "ms", "desc": "GPS milliseconds since week start"},
+    "GWk": {"unit": "weeks", "desc": "GPS week number"},
+    "NSats": {"unit": "count", "desc": "Number of satellites used"},
+    "HDop": {"unit": "unitless", "desc": "Horizontal dilution of precision"},
+    "Lat": {"unit": "1e-7°", "desc": "Latitude"},
+    "Lng": {"unit": "1e-7°", "desc": "Longitude"},
+    "Alt": {"unit": "mm", "desc": "Altitude above mean sea level"},
+    "Spd": {"unit": "m/s", "desc": "Ground speed"},
+    "GCrs": {"unit": "deg", "desc": "Ground course"},
+    "VZ": {"unit": "cm/s", "desc": "Vertical speed"},
+    "Yaw": {"unit": "deg", "desc": "Course over ground direction"}
+  },
+  "XKQ[0]": {
+    "time_boot_ms": {"unit": "ms", "desc": "Timestamp since boot"},
+    "C": {"unit": "unitless", "desc": "Magnitude/quaternion scalar"},
+    "Q1": {"unit": "quat", "desc": "Quaternion component 1"},
+    "Q2": {"unit": "quat", "desc": "Quaternion component 2"},
+    "Q3": {"unit": "quat", "desc": "Quaternion component 3"},
+    "Q4": {"unit": "quat", "desc": "Quaternion component 4"}
+  },
+  "PARM": {
+    "time_boot_ms": {"unit": "ms", "desc": "Timestamp of parameter sync"},
+    "Name": {"unit": "string", "desc": "Parameter name"},
+    "Value": {"unit": "var", "desc": "Current parameter value"},
+    "Default": {"unit": "var", "desc": "Default parameter value"}
+  },
+  "XKF4[0]": {
+    "time_boot_ms": {"unit": "ms", "desc": "Timestamp since system boot"},
+    "C": {"unit": "unitless", "desc": "Quaternion scalar"},
+    "SV": {"unit": "unitless", "desc": "Velocity innovation"},
+    "SP": {"unit": "unitless", "desc": "Position innovation"},
+    "SH": {"unit": "unitless", "desc": "Heading innovation"},
+    "SM": {"unit": "unitless", "desc": "Magnetic innovation"},
+    "SVT": {"unit": "unitless", "desc": "Velocity test statistic"},
+    "errRP": {"unit": "unitless", "desc": "Roll/pitch estimator error"},
+    "OFN": {"unit": "unitless", "desc": "Obs. significance north"},
+    "OFE": {"unit": "unitless", "desc": "Obs. significance east"},
+    "FS": {"unit": "flag", "desc": "Failsafe status flag"},
+    "TS": {"unit": "unitless", "desc": "Test statistic"},
+    "SS": {"unit": "unitless", "desc": "Scale statistic"},
+    "GPS": {"unit": "flag", "desc": "GPS fusion enabled"},
+    "PI": {"unit": "unitless", "desc": "P/I control balance"}
+  },
+  "FNCE": {},
+  "POS": {
+    "time_boot_ms": {"unit": "ms", "desc": "Timestamp since boot"},
+    "Lat": {"unit": "deg", "desc": "Estimated latitude"},
+    "Lng": {"unit": "deg", "desc": "Estimated longitude"},
+    "Alt": {"unit": "m", "desc": "Estimated altitude AMSL"},
+    "RelHomeAlt": {"unit": "m", "desc": "Altitude relative to home"},
+    "RelOriginAlt": {"unit": "m", "desc": "Altitude relative to origin"}
+  }
+}
